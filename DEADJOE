@@ -1,0 +1,37 @@
+
+*** These modified files were found in JOE when it aborted on Sun Aug  2 21:27:09 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+2DB11B
+1F68A5
+009900
+78AB35
+body
+h1
+h1
+
+*** File '(Unnamed)'
+head
+title
+start
++
+Respuesta
+tema
+domo
+5.25
+a1
+save
+
+*** File '(Unnamed)'
+controllers/session_controller.js
+controllers/session_controller.js
+controllers/comment_controller.js
+models/comment.js
+routes/index.js
+views/quizes/show.ejs
+controllers/session_controller.js
+controllers/session_controller.js
+controllers/user_controller.js
+package.json
+controllers/quiz_controller.js
