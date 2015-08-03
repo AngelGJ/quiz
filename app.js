@@ -42,6 +42,22 @@ app.use(function(req, res, next) {
 });
                 
 
+// MW para auto-logout
+app.use(function(req, res, next) {
+  // Si hay una sesión activa
+  if (req.session.user) {
+    // Si han transcurrido más de 2 minutos desde la última acción borra la sesión
+    if (Date.now() - req.session.user.time > 2*60*1000) {
+      delete req.session.user;
+    } 
+    // En caso contrario, actualiza el tiempo de la última acción
+    else {
+			req.session.user.time = Date.now();
+    }
+  }
+  next();
+});
+
 app.use('/', routes);
 
 // catch 404 and forward to error handler
